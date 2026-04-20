@@ -10,7 +10,7 @@ import { DBTODB } from "../Models/fileModel.js";
 
 export const csvDatafromDb = async(req, res)=> {
   try{
-    const data = await fileCsv.find().lean();
+    const data = await fileCsv.find();
 
     if(!data){
         return res.status(404).json({message:"No Data found"});
